@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import FoodComponent from './Components/FoodComponent.jsx';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          
         </a>
       </header>
+      <FoodComponent />
     </div>
   );
 }
