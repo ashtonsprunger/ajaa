@@ -7,6 +7,7 @@ function App() {
   const [latitude, setLatitude] = useState('');
   const [longitude, setLongitude] = useState('');
   const [temperatureType, setTemperature] = useState('');
+  
   useEffect(() => {
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition)
@@ -26,12 +27,7 @@ function App() {
     }
   }
 
-
-
-  
-
-
-  return (
+return (
     <div className="App">
       <h1>{latitude}</h1>
       <h1>{longitude}</h1>
