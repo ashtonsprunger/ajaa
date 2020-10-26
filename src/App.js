@@ -1,27 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import WeatherComponent from './Components/WeatherComponent';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+
+import NasaComponent from "./Components/NasaComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <WeatherComponent />
-    </div>
-  );
+  return <NasaComponent lat={41.1889071} lon={-85.1174255} />;
 }
 
 export default App;
