@@ -15,13 +15,19 @@ const NasaComponent = (props) => {
   }&api_key=${apiKey}&dim=${0.03}`;
 
   const getImage = () => {
-    fetch(url).then((response) => setImageUrl(response.url));
+    console.log("lat:", props.lat);
+    console.log("lon:", props.lon);
+    console.log("url:", url);
+    fetch(url).then((response) => {
+      setImageUrl(response.url);
+      console.log("response:", response);
+    });
   };
 
   useEffect(getImage, []);
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", margin: "0 20px" }}>
       <h3>You are here!</h3>
       <img
         style={{ width: "inherit", borderRadius: "50px" }}
