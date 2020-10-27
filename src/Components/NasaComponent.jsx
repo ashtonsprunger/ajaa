@@ -21,9 +21,10 @@ const NasaComponent = (props) => {
   useEffect(getImage, []);
 
   return (
-    <div style={{ borderRadius: "50px", width: "500px" }}>
+    <div style={{ width: "100%" }}>
+      <h3>You are here!</h3>
       <img
-        style={{ width: "inherit", height: "inherit", borderRadius: "50px" }}
+        style={{ width: "inherit", borderRadius: "50px" }}
         src={imageUrl}
         alt="location image"
       />
