@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div style={{ padding: "1em" }} className="App">
       <Row>
         <Col>
           <h1>Welcome to ajaa</h1>
@@ -42,7 +42,7 @@ function App() {
             <Col xs="4">
               <NasaComponent lat={lat} lon={lon} />
             </Col>
-            <Col xs="4">
+            <Col id="weather" xs="4">
               <WeatherComponent lat={lat} lon={lon} />
             </Col>
             <Col xs="4">
