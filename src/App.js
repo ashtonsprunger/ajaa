@@ -32,7 +32,9 @@ function App() {
   return (
     <div className="App">
       <Row>
-        <h1>Welcome to ajaa</h1>
+        <Col>
+          <h1>Welcome to ajaa</h1>
+        </Col>
       </Row>
       <Row>
         <Col xs="6">
@@ -43,13 +45,17 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col xs="4">
-          <NasaComponent lat={lat} lon={lon} />
-        </Col>
-        <Col>{/* <WeatherComponent /> */}</Col>
-        <Col xs="4">{/* <WeatherComponent lat={lat} lon={lon} /> */}</Col>
-        {/* <Col xs="4"><FoodComponent lat={lat} lon={lon}/></Col>  */}
-        <FoodComponent />
+        {lat && lon ? (
+          <>
+            <Col xs="4">
+              <NasaComponent lat={lat} lon={lon} />
+            </Col>
+            <Col xs="4">{/* <WeatherComponent lat={lat} lon={lon} /> */}</Col>
+            <Col xs="4">
+              <FoodComponent lat={lat} lon={lon} />
+            </Col>
+          </>
+        ) : null}
       </Row>
 
       <div>
