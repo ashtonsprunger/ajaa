@@ -9,13 +9,13 @@ const Weather = (props) => {
      console.log(props.lat, props.lon);
      
      
-     const [ description, setDescription] = useState('');
-     const [ temperature, setTemperature] = useState('');
-     const [ pressure, setPressure      ] = useState('');
-     const [ humidity, setHumidity      ] = useState('');
-     const [ windSpeed, setWindSpeed    ] = useState('');
-     const [ units, setUnits ] = useState('units=imperial');
-     const [ butText, setButText ] = useState('Switch to Metric');
+     const [ description, setDescription ] = useState('');
+     const [ temperature, setTemperature ] = useState('');
+     const [ pressure, setPressure       ] = useState('');
+     const [ humidity, setHumidity       ] = useState('');
+     const [ windSpeed, setWindSpeed     ] = useState('');
+     const [ units, setUnits             ] = useState('units=imperial');
+     const [ butText, setButText         ] = useState('Switch to Metric');
      
      const key = '70d415361464c75295b5f22c9849e8c3';
      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lon}&appid=${key}&${units}`;
