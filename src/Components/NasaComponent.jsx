@@ -27,7 +27,7 @@ const NasaComponent = (props) => {
   useEffect(getImage, []);
 
   return (
-    <div style={{ width: "100%", margin: "0 20px" }}>
+    <div style={{ width: "100%" }}>
       <h3>You are here!</h3>
       <img
         style={{ width: "inherit", borderRadius: "50px" }}
