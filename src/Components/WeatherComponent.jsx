@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // API key: 70d415361464c75295b5f22c9849e8c3
 // let lat = ?
@@ -18,13 +18,25 @@ import React from 'react';
 
 const Weather = (props) => {
 
-     let key = "70d415361464c75295b5f22c9849e8c3";
+     const key = "70d415361464c75295b5f22c9849e8c3";
      let lat = props.lat;
      let lon = props.lon;
      let url = `api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
 
+     const [ weather, setWeather        ] = useState('');
+     const [ description, setDescription] = useState('');
+     const [ temperature, setTemperature] = useState('');
+     const [ feels, setFeels            ] = useState('');
+     const [ pressure, setPressure      ] = useState('');
+     const [ humidity, setHumidity      ] = useState('');
+     const [ windSpeed, setWindSpeed    ] = useState('');
 
-     // TODO: FETCH HERE
+     const weather = () = {
+          fetch(url).then((res) => {
+               setWeather(res.weather.main)
+               setDescription(res.weather.description)
+          })
+     }
 
      return(
           <div>
