@@ -5,13 +5,6 @@ import {
      Row
 } from 'reactstrap';
 
-// API key: 70d415361464c75295b5f22c9849e8c3
-// let lat = ?
-// let long = ?
-
-// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-// api.openweathermap.org/data/2.5/weather?lat=39.770639&lon=-86.285116&appid=70d415361464c75295b5f22c9849e8c3
-
 const Weather = (props) => {
      console.log(props.lat, props.lon);
      
