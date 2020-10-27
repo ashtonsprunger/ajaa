@@ -21,27 +21,24 @@ const Weather = (props) => {
      let url = `https://api.openweathermap.org/data/2.5/weather?lat=${props.lat}&lon=${props.lon}&appid=${key}&${units}`;
      
      const getWeather = () => {
-          fetch(url)
-          .then(res => res.json())
-          .then((data) => {
-               setDescription(data.weather[0].description);
-               setTemperature(data.main.temp);
-               setPressure(data.main.pressure);
-               setHumidity(data.main.humidity);
-               setWindSpeed(data.wind.speed);
-          })
-     }
+     fetch(url).then(res => res.json()).then((data) => {
+     setDescription      (data.weather[0].description);
+     setTemperature      (data.main.temp);
+     setPressure         (data.main.pressure);
+     setHumidity         (data.main.humidity);
+     setWindSpeed        (data.wind.speed);
+     })}
 
      useEffect(getWeather, [units]);
 
      const changeUnits = (e) => {
-          if(units == 'units=metric'){
-               setUnits('units=imperial');
-               setButText('Switch to Metric');
-          } else{
-               setUnits('units=metric');
-               setButText('Switch to Imperial');
-          }
+     if(units == 'units=metric'){
+     setUnits  ('units=imperial');
+     setButText('Switch to Metric');
+     } else{
+     setUnits  ('units=metric');
+     setButText('Switch to Imperial');
+     }
      }
 
      return(
