@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "reactstrap";
 import NasaComponent from "./Components/NasaComponent";
-import FoodSecondComponent from "./Components/FoodSecondComponent";
+import FoodComponent from "./Components/FoodComponent";
 // import WeatherComponent from "./Components/WeatherComponent";
 
 function App() {
@@ -49,7 +49,7 @@ function App() {
         <Col>{/* <WeatherComponent /> */}</Col>
         <Col xs="4">{/* <WeatherComponent lat={lat} lon={lon} /> */}</Col>
         {/* <Col xs="4"><FoodComponent lat={lat} lon={lon}/></Col>  */}
-        <FoodSecondComponent />
+        <FoodComponent />
       </Row>
 
       <div>
