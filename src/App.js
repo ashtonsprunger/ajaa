@@ -36,9 +36,9 @@ return (
         <Col xs="6"><h2>Lon: {lon}</h2></Col>
        </Row>
       <Row>
-        <Col xs="4"><NasaComponent /></Col>
-        <Col xs="4"><WeatherComponent /></Col>
-        <Col xs="4"><FoodComponent /></Col> 
+        <Col xs="4"><NasaComponent lat={lat} lon={lon}/></Col>
+        <Col xs="4"><WeatherComponent lat={lat} lon={lon}/></Col>
+        <Col xs="4"><FoodComponent lat={lat} lon={lon}/></Col> 
       </Row>   
 
 
