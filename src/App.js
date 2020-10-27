@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, {useState, useEffect} from 'react'
 import NasaComponent from "./Components/NasaComponent";
 
-unction App() {
+function App() {
   
-  const [latitude, setLatitude] = useState('');
-  const [longitude, setLongitude] = useState('');
+  const [lat, setLatitude] = useState('');
+  const [lon, setLongitude] = useState('');
   const [temperatureType, setTemperature] = useState('');
   useEffect(() => {
     if(navigator.geolocation) {
@@ -30,9 +30,18 @@ unction App() {
 
 return (
     <div className="App">
-      <h1>{latitude}</h1>
-      <h1>{longitude}</h1>
-      <h1>{temperatureType}</h1>
+      <Row><h1>Welcome to ajaa</h1></Row>
+      <Row>
+        <Col xs="6"><h2>Lat: {lat}</h2></Col>
+        <Col xs="6"><h2>Lon: {lon}</h2></Col>
+       </Row>
+      <Row>
+        <Col xs="4"><NasaComponent lat={lat} lon={lon}/></Col>
+        <Col xs="4"><WeatherComponent lat={lat} lon={lon}/></Col>
+        <Col xs="4"><FoodComponent lat={lat} lon={lon}/></Col> 
+      </Row>   
+
+
       <div>
       <label className="switch">
         <input type="checkbox"  onChange={(e) => setTemperatureType(e)} value={temperatureType}/>
